@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume Result</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 80px;
+            background: #f4f4f4;
+        }
+
+        .box {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin: 8px;
+            color: green;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background: #2563eb;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Resume Screening Result</h1>
+
+        <h2>Resume: {{ filename }}</h2>
+
+        <h2>Score: {{ score }}%</h2>
+
+        <h3>Matched Skills</h3>
+
+        <ul>
+
+            {% for skill in matched_skills %}
+
+            <li>{{ skill }}</li>
+
+            {% endfor %}
+
+        </ul>
+
+        <br>
+
+        <a href="/">Upload Another Resume</a>
+
+    </div>
+
+</body>
+
+</html>

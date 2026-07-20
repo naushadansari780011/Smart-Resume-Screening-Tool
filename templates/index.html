@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Smart Resume Screening Tool</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Smart Resume Screening Tool</h1>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+            <label><b>Upload Resume (PDF/TXT)</b></label>
+
+            <br><br>
+
+            <input type="file" name="resume" required>
+
+            <br><br>
+
+            <label><b>Job Description</b></label>
+
+            <br><br>
+
+            <textarea name="job_description" rows="10" cols="60" placeholder="Example:
+
+Python
+Flask
+Machine Learning
+SQL
+HTML
+CSS
+JavaScript"></textarea>
+
+            <br><br>
+
+            <button type="submit">Analyze Resume</button>
+
+        </form>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
